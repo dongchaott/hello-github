@@ -6,5 +6,91 @@
 </head>
 <body>
 	<h2>my-2.0.0分支</h2>
+	<pre>
+		Git
+			开源免费的  分布式版本控制器
+					--> 对项目版本、源代码进行管理的一个工具
+					* svn  --> 本地的版本控制器
+					* cvs
+
+
+		Git : Git之父--> 里拉斯托沃兹 --> liunx 系统之父
+							Git 一开始是 作者为了方便管理 liunx 系统更新  开发的 liunx的版本控制器
+							将Git 进行了单独的抽取，分布式版本控制器
+
+		Git 就是一个项目的周期管理仓库工具
+					GitHub是基于Git的在线代码仓库
+
+				** windows 系统需要安装
+
+		如何使用git
+			使用git 管理一个项目，首先需要进入到项目被管理的目录
+			  --> 初始化本地仓库（对项目而言的）
+
+
+
+		常用命令
+			1、git版本查看：git --version
+				 --> git 图形化管理工具
+			2、git本地仓库初始化 git init   (**   .  在系统中表示 隐藏文件|文件夹)
+				 --> 会在当前项目目录中创建一个 隐藏 .git文件夹 
+				 		--> 用于存放项目更新的所有记录
+				 			--> 查看系统（liunx mac os ）隐藏文件  ls -a
+			3、git本地仓库 状态查询
+						git status
+							--> git status -s  查看简要信息
+			4、将文件提交到git仓库进行管理
+						git add 文件名
+							--> git add . 表示 对当前文件夹中的所有文件进行管理
+							--> git add --all  表示对当前文件夹中所有文件进行管理
+									--> .gitignore  用于配置被忽略的文件
+																（在该文件中配置的文件|文件夹不会再被git管理）
+																 三方工具创建该文件
+																 该文件应该放置在 被管理项目的根目录中
+																 配置文件忽略项：
+																 			直接写需要忽略的文件和文件夹的名称，
+																 			每行写一个
+			5、消息日志提交 git commit -m 消息描述  （消息描述是不可以省略的）
+					在日志提交前 （如果是第一使用） 需要设置 邮箱和姓名
+					mac os 系统会默认提供一个
+					***  对被修改的文件进行 add 操作
+
+
+			6、查看 相关管理者信息 git config --global user.name   查询
+												  git config --global user.email  查询
+
+												  git config --global user.name 作者姓名  添加|修改
+												  git config --global user.email 作者邮箱  添加|修改
+			7、查看当前项目仓库中的消息日志 git log
+					----------------------------------------------------------------
+					//由git 生成的  HAX码   是一个版本更新的 id  （不会出现重复的，不可以修改）
+					commit 12fe39a1e784b02fec9c081c70d68cbe2d3b988c
+					Author: itany itany@itany.com      // 作者 ： 姓名 邮箱
+					Date:   Thu Apr 20 11:46:07 2017 +0800  //时间
+
+		    	src/01.html 功能更新@itany    //日志
+		    	----------------------------------------------------------------
+		  8、git diff  对比版本库中最后一次修改的文件和当前文件的区别 变化
+		  						-  表示删除
+		  						+  表示新增
+
+		  9、版本回滚功能   git reset --hard 版本号的前6位
+		  		使用版本回滚
+
+
+		GitHub的使用
+			1、记录远端服务器地址
+					git remote add origin 远端地址   //定义了一个变量 变量值是远端地址
+					--> git remote 取查看远端配置
+					--> git remote -v 查看远端地址列表
+			2、代码提交到giehub中时 默认在master库中
+			3、将本地的代码提交到github 中 
+					git push -u origin master 
+			4、将远端数据进行下载
+					git pull origin master
+
+		参考手册  http://www.cnblogs.com/twtp/articles/5264073.html
+
+	</pre>
 </body>
 </html>
